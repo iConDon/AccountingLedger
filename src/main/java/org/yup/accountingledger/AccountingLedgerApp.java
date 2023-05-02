@@ -28,29 +28,32 @@ public class AccountingLedgerApp {
         boolean appRunning = true;
 
         String homeScreenChoice = Screens.homeScreen();
+   //     int i = 0;
+    //    while( i == 1) {
 
-        switch (homeScreenChoice) {
+            switch (homeScreenChoice) {
 
-            //View possible input
-            case "D" -> {
-                int addDeposit = Screens.addDeposit();
-                String addDescription = Screens.addDescription();
-                String addVendor = Screens.addVendor();
-                Transactions transactions = new Transactions(LocalDate.now(), LocalTime.now(), addDescription, addVendor, addDeposit);
+                //View possible input
+                case "D" -> {
+                    int addDeposit = Screens.addDeposit();
+                    String addDescription = Screens.addDescription();
+                    String addVendor = Screens.addVendor();
+                    Transactions transactions = new Transactions(LocalDate.now(), LocalTime.now(), addDescription, addVendor, addDeposit);
+                }
+                case "P" -> {
+                    int makePayment = Screens.makePayment();
+                }
+                case "L" -> {
+                    int showLedger = Screens.Ledger();
+                }
+                case "X" -> {
+                    String exit = "Thank you for your business!";
+                }
+                default -> System.out.println("No selection made");
             }
-            case "P" -> {
-                int makePayment = Screens.makePayment();
-            }
-            case "L" -> {
-                int showLedger = Screens.Ledger();
-            }
-            default -> System.out.println("No selection made");
         }
 
-        while (appRunning) {
-
-        }
-    }
+  //  }
 
     public static void writeTransactionToFile() {
 

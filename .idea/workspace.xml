@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c49cd78d-6c43-4a8c-beb4-f995123dce59" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/yup/accountingledger/Screens.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/yup/accountingledger/Transactions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Transactions.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/yup/accountingledger/AccountingLedgerApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/yup/accountingledger/AccountingLedgerApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/yup/accountingledger/Screens.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/yup/accountingledger/Screens.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +46,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/Student/LearnToCode/Workbook1/NeighborHoodLibraryApp/src/main/java/Org/yup/NeighborhoodLibrary/NeighborhoodLibrary.java"
+    "last_opened_file_path": "C:/Users/Student/LearnToCode/workbook3/SearchInventory/src/main/java/org/yup/searchinventory/StoreApp.java"
   }
 }]]></component>
   <component name="RunManager">
@@ -80,5 +79,8 @@
       <updated>1682709226506</updated>
     </task>
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
   </component>
 </project>

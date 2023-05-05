@@ -27,9 +27,11 @@ public class AccountingLedgerApp {
 
         boolean appRunning = true;
 
-        String homeScreenChoice = Screens.homeScreen();
-   //     int i = 0;
-    //    while( i == 1) {
+
+
+        while (appRunning) {
+
+            String homeScreenChoice = Screens.homeScreen();
 
             switch (homeScreenChoice) {
 
@@ -38,34 +40,46 @@ public class AccountingLedgerApp {
                     int addDeposit = Screens.addDeposit();
                     String addDescription = Screens.addDescription();
                     String addVendor = Screens.addVendor();
-                    Transactions transactions = new Transactions(LocalDate.now(), LocalTime.now(), addDescription, addVendor, addDeposit);
+                    Transactions transaction = new Transactions(LocalDate.now(), LocalTime.now(), addDescription, addVendor, addDeposit);
+                    writeTransactionToFile(transaction);
+
                 }
                 case "P" -> {
                     int makePayment = Screens.makePayment();
+                    String addDescription = Screens.addDescription();
+                    String addVendor = Screens.addVendor();
+                    Transactions transaction = new Transactions(LocalDate.now(), LocalTime.now(), addDescription, addVendor, makePayment *= -1);
+                    writeTransactionToFile(transaction);
+
                 }
                 case "L" -> {
-                    int showLedger = Screens.Ledger();
+                    String showLedger = Screens.Ledger();
                 }
                 case "X" -> {
-                    String exit = "Thank you for your business!";
+                    appRunning = false;
                 }
                 default -> System.out.println("No selection made");
             }
         }
 
-  //  }
+    }
 
-    public static void writeTransactionToFile() {
+        public static void writeTransactionToFile(Transactions transaction ) {
 
-        try {
-            FileWriter fileWriter = new FileWriter("Transactions.csv");
-            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+            try {
+                FileWriter fileWriter = new FileWriter("Transaction.csv", true);
+                BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+                bufferedWriter.write(String.format("%s|%s|%s|%s|%.2f\n", transaction.getDate().toString(), transaction.getTime().toString(), transaction.getDescription(), transaction.getVendor(), transaction.getAmount()));
+                bufferedWriter.close();
+                fileWriter.close();
 
-            String theLine;
-        } catch (IOException e) {
-            System.out.println("Couldn't create file");
+
+
+            } catch (IOException e) {
+                System.out.println("Couldn't load file");
+            }
         }
     }
-}
+
 
 
